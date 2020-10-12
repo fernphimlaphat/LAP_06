@@ -154,6 +154,7 @@ void MoveAmmo(int x, int y, int i,int p)
 	
 		for ( j = 1; j <= 5; j++)
 		{
+			Beep(700, 100);
 			for (i = y; i >= 0; i--)
 			{
 				Ammo(x + 3, i - 2);
@@ -221,7 +222,6 @@ void Ship()
 						if (m == 's') { setcolor(6, 4); draw(x, y);  break; }
 						else if (m == ' ')
 						{
-							Beep(700, 100);
 							MoveAmmo(x, y, i,p);
 						}
 						if (x == 0)
@@ -255,7 +255,6 @@ void Ship()
 
 						else if (m == ' ')
 						{
-							Beep(700, 100);
 							MoveAmmo(x, y, i,p);
 
 							if (x == 80)
